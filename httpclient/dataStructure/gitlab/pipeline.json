@@ -1,0 +1,216 @@
+{
+    "object_kind": "pipeline",
+    "object_attributes": {
+        "id": 26859,
+        "ref": "bugfix/shave-summary",
+        "tag": false,
+        "sha": "e3eb3fbeb46d508101d1b625a7dcc8a5da74637b",
+        "before_sha": "0000000000000000000000000000000000000000",
+        "source": "merge_request_event",
+        "status": "success",
+        "detailed_status": "passed",
+        "stages": [
+            "build",
+            "validate",
+            "test"
+        ],
+        "created_at": "2021-12-24 14:15:35 UTC",
+        "finished_at": "2021-12-24 14:19:48 UTC",
+        "duration": 237,
+        "queued_duration": 3,
+        "variables": []
+    },
+    "merge_request": {
+        "id": 8659,
+        "iid": 416,
+        "title": "[Автошейв][Bugfix]",
+        "source_branch": "bugfix/shave-summary",
+        "source_project_id": 42,
+        "target_branch": "alpha",
+        "target_project_id": 42,
+        "state": "opened",
+        "merge_status": "unchecked",
+        "url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new/-/merge_requests/416"
+    },
+    "user": {
+        "id": 52,
+        "name": "Алишерова Сабина",
+        "username": "salisherova",
+        "avatar_url": "https://git.teamlead.com/uploads/-/system/user/avatar/52/avatar.png",
+        "email": "salisherova@gmail.com"
+    },
+    "project": {
+        "id": 42,
+        "name": "leadzvon_backend_new",
+        "description": "",
+        "web_url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new",
+        "avatar_url": "https://git.teamlead.com/uploads/-/system/project/avatar/42/sas.png",
+        "git_ssh_url": "git@git.teamlead.com:leadzvon/backend/leadzvon_backend_new.git",
+        "git_http_url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new.git",
+        "namespace": "backend",
+        "visibility_level": 0,
+        "path_with_namespace": "leadzvon/backend/leadzvon_backend_new",
+        "default_branch": "alpha",
+        "ci_config_path": ""
+    },
+    "commit": {
+        "id": "e3eb3fbeb46d508101d1b625a7dcc8a5da74637b",
+        "message": "[Автошейв][Bugfix]\nWrong indent fix\n",
+        "title": "[Автошейв][Bugfix]",
+        "timestamp": "2021-12-24T20:15:21+06:00",
+        "url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new/-/commit/e3eb3fbeb46d508101d1b625a7dcc8a5da74637b",
+        "author": {
+            "name": "salisherova",
+            "email": "salisherova@gmail.com"
+        }
+    },
+    "builds": [
+        {
+            "id": 96243,
+            "stage": "validate",
+            "name": "Swagger validate",
+            "status": "success",
+            "created_at": "2021-12-24 14:15:35 UTC",
+            "started_at": "2021-12-24 14:16:10 UTC",
+            "finished_at": "2021-12-24 14:16:48 UTC",
+            "duration": 37.672953,
+            "queued_duration": 8.014628,
+            "when": "on_success",
+            "manual": false,
+            "allow_failure": false,
+            "user": {
+                "id": 52,
+                "name": "Алишерова Сабина",
+                "username": "salisherova",
+                "avatar_url": "https://git.teamlead.com/uploads/-/system/user/avatar/52/avatar.png",
+                "email": "salisherova@gmail.com"
+            },
+            "runner": {
+                "id": 40,
+                "description": "e2e runner 2",
+                "runner_type": "project_type",
+                "active": true,
+                "is_shared": false,
+                "tags": [
+                    "e2e_runner",
+                    "frontend"
+                ]
+            },
+            "artifacts_file": {
+                "filename": null,
+                "size": null
+            },
+            "environment": null
+        },
+        {
+            "id": 96242,
+            "stage": "build",
+            "name": "Build vendor cache",
+            "status": "success",
+            "created_at": "2021-12-24 14:15:35 UTC",
+            "started_at": "2021-12-24 14:15:38 UTC",
+            "finished_at": "2021-12-24 14:16:02 UTC",
+            "duration": 23.812826,
+            "queued_duration": 2.959063,
+            "when": "on_success",
+            "manual": false,
+            "allow_failure": false,
+            "user": {
+                "id": 52,
+                "name": "Алишерова Сабина",
+                "username": "salisherova",
+                "avatar_url": "https://git.teamlead.com/uploads/-/system/user/avatar/52/avatar.png",
+                "email": "salisherova@gmail.com"
+            },
+            "runner": {
+                "id": 40,
+                "description": "e2e runner 2",
+                "runner_type": "project_type",
+                "active": true,
+                "is_shared": false,
+                "tags": [
+                    "e2e_runner",
+                    "frontend"
+                ]
+            },
+            "artifacts_file": {
+                "filename": null,
+                "size": null
+            },
+            "environment": null
+        },
+        {
+            "id": 96244,
+            "stage": "validate",
+            "name": "Psalm validate",
+            "status": "success",
+            "created_at": "2021-12-24 14:15:35 UTC",
+            "started_at": "2021-12-24 14:16:10 UTC",
+            "finished_at": "2021-12-24 14:16:56 UTC",
+            "duration": 45.945733,
+            "queued_duration": 8.283579,
+            "when": "on_success",
+            "manual": false,
+            "allow_failure": false,
+            "user": {
+                "id": 52,
+                "name": "Алишерова Сабина",
+                "username": "salisherova",
+                "avatar_url": "https://git.teamlead.com/uploads/-/system/user/avatar/52/avatar.png",
+                "email": "salisherova@gmail.com"
+            },
+            "runner": {
+                "id": 40,
+                "description": "e2e runner 2",
+                "runner_type": "project_type",
+                "active": true,
+                "is_shared": false,
+                "tags": [
+                    "e2e_runner",
+                    "frontend"
+                ]
+            },
+            "artifacts_file": {
+                "filename": null,
+                "size": null
+            },
+            "environment": null
+        },
+        {
+            "id": 96245,
+            "stage": "test",
+            "name": "Tests",
+            "status": "success",
+            "created_at": "2021-12-24 14:15:35 UTC",
+            "started_at": "2021-12-24 14:17:00 UTC",
+            "finished_at": "2021-12-24 14:19:48 UTC",
+            "duration": 167.513828,
+            "queued_duration": 3.651053,
+            "when": "on_success",
+            "manual": false,
+            "allow_failure": false,
+            "user": {
+                "id": 52,
+                "name": "Алишерова Сабина",
+                "username": "salisherova",
+                "avatar_url": "https://git.teamlead.com/uploads/-/system/user/avatar/52/avatar.png",
+                "email": "salisherova@gmail.com"
+            },
+            "runner": {
+                "id": 23,
+                "description": "e2e runner 3",
+                "runner_type": "project_type",
+                "active": true,
+                "is_shared": false,
+                "tags": [
+                    "backend"
+                ]
+            },
+            "artifacts_file": {
+                "filename": "artifacts.zip",
+                "size": 7498
+            },
+            "environment": null
+        }
+    ]
+}

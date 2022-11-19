@@ -1,0 +1,26 @@
+### Merge Request
+POST http://localhost:85/gitlab
+Content-Type: application/json
+Accept: application/json
+X-Gitlab-Event: Merge Request Hook
+Authorization: Bearer AAAAC3NzaC1lZDI1NTE5AAAAIG5OZCxHxhEpXSgf6XFl9PYDi7HlzDvMixCAQA
+
+< dataStructure/gitlab/merge_request.json
+
+### Push Hook
+POST http://localhost:85/gitlab
+Content-Type: application/json
+Accept: application/json
+X-Gitlab-Event: Push Hook
+Authorization: Bearer AAAAC3NzaC1lZDI1NTE5AAAAIG5OZCxHxhEpXSgf6XFl9PYDi7HlzDvMixCAQA
+
+< dataStructure/gitlab/push.json
+
+### sentry
+POST http://localhost:85/sentry
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer AAAAC3NzaC1lZDI1NTE5AAAAIG5OZCxHxhEpXSgf6XFl9PYDi7HlzDvMixCAQA
+
+< dataStructure/sentry_leadzvon-backend.json
+

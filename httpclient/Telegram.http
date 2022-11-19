@@ -1,0 +1,4 @@
+### TEST
+GET http://localhost/test
+Content-Type: application/json
+Accept: application/json

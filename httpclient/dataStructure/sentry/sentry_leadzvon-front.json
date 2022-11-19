@@ -1,0 +1,1297 @@
+{
+    "id": "194063",
+    "project": "leadzvon-front",
+    "project_name": "leadzvon-front",
+    "project_slug": "leadzvon-front",
+    "logger": null,
+    "level": "error",
+    "culprit": "VueComponent.onScroll(chunk-vendors)",
+    "message": "",
+    "url": "https://sentry.teamlead.com/organizations/leadzvon/issues/194063/?referrer=webhooks_plugin",
+    "triggering_rules": [
+        "FRONT_TELEGRAM"
+    ],
+    "event": {
+        "event_id": "cd06d9f8c05a40c2917ed29c067f999b",
+        "level": "error",
+        "version": "7",
+        "type": "error",
+        "fingerprint": [
+            "{{ default }}"
+        ],
+        "culprit": "VueComponent.onScroll(chunk-vendors)",
+        "logger": "",
+        "platform": "javascript",
+        "timestamp": 1640246631.751,
+        "received": 1640246633.680631,
+        "release": "4.8.14",
+        "environment": "production",
+        "user": {
+            "id": "bc07b2d3-b60e-4f1b-958e-aed7e01046cd",
+            "email": "Astrerolycajoy@gmail.com",
+            "ip_address": "130.105.227.171",
+            "name": "PH_Lyca  ",
+            "data": {
+                "activity": {
+                    "isBlock": false,
+                    "isConfirmed": false,
+                    "lastIp": "130.105.227.171",
+                    "lastLoginAt": "2021-12-23T00:06:43.000000Z",
+                    "registeredAt": "2021-12-21T15:57:36.000000Z"
+                },
+                "avatar": "avatars/bc07b2d3-b60e-4f1b-958e-aed7e01046cd-61c2400bad621499014503.png",
+                "login": "PH_Lyca",
+                "type": "OPERATOR"
+            }
+        },
+        "request": {
+            "url": "https://leadzvon.ru/operator/dashboard",
+            "headers": [
+                [
+                    "Referer",
+                    "https://leadzvon.ru/operator/dashboard?radio-83=uiError"
+                ],
+                [
+                    "User-Agent",
+                    "Mozilla/5.0 (Linux; Android 9; MRD-LX2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36"
+                ]
+            ]
+        },
+        "contexts": {
+            "browser": {
+                "name": "Chrome Mobile",
+                "version": "90.0.4430",
+                "type": "browser"
+            },
+            "device": {
+                "family": "Huawei MRD-LX2",
+                "model": "MRD-LX2",
+                "brand": "Huawei",
+                "type": "device"
+            },
+            "os": {
+                "name": "Android",
+                "version": "9",
+                "type": "os"
+            },
+            "vue": {
+                "componentName": "v-menu",
+                "lifecycleHook": "v-on handler",
+                "propsData": {
+                    "activator": "[object HTMLDivElement]",
+                    "attach": false,
+                    "closeOnClick": false,
+                    "closeOnContentClick": false,
+                    "disableKeys": true,
+                    "eager": false,
+                    "maxHeight": 304,
+                    "nudgeBottom": 0,
+                    "openOnClick": false,
+                    "value": true
+                },
+                "type": "vue"
+            }
+        },
+        "breadcrumbs": {
+            "values": [
+                {
+                    "timestamp": 1640246411.321,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/couriers?code=PH"
+                    }
+                },
+                {
+                    "timestamp": 1640246411.348,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/order-reasons?locale=en"
+                    }
+                },
+                {
+                    "timestamp": 1640246411.367,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/scripts?offerId=f758ffcf-3d1a-4ff7-98ee-0b648350fc12"
+                    }
+                },
+                {
+                    "timestamp": 1640246411.832,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/goods?offerId=f758ffcf-3d1a-4ff7-98ee-0b648350fc12"
+                    }
+                },
+                {
+                    "timestamp": 1640246413.466,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "button#goodsStepNextBtn.mx-0.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--light.v-size--default.success[type=\"button\"]"
+                },
+                {
+                    "timestamp": 1640246414.319,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246415.149,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=2u5mdq9x_n&index=42&time=56283.5&t=562835&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246415.613,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246420.493,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "i.v-icon.notranslate.mdi.mdi-chevron-down.theme--light"
+                },
+                {
+                    "timestamp": 1640246422.165,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=2u5mdq9x_n&index=43&time=56995.3&t=569953&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246422.886,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246425.008,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246429.7,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=2u5mdq9x_n&index=44&time=57745.8&t=577458&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246432.916,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246435.014,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246437.156,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=2u5mdq9x_n&index=45&time=58494.4&t=584944&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246437.662,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "button#workCancelCallBtn.ml-0.blue--text.text-lowercase.workCancelCallBtn.v-btn.v-btn--text.theme--dark.v-size--default[type=\"button\"]"
+                },
+                {
+                    "timestamp": 1640246442.893,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246444.654,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=2u5mdq9x_n&index=46&time=59242.7&t=592427&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246445.044,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246452.891,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246462.92,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246472.891,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246482.887,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246492.889,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246494.458,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "div.v-input__control > div.v-input__slot"
+                },
+                {
+                    "timestamp": 1640246494.466,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://leadzvon.ru/version.json"
+                    }
+                },
+                {
+                    "timestamp": 1640246495.175,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246499.064,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "PUT",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/orders/687bdb59-cda7-4ffc-96f2-369f83e5bdc9"
+                    }
+                },
+                {
+                    "timestamp": 1640246499.336,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/profile"
+                    }
+                },
+                {
+                    "timestamp": 1640246499.703,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/tasks"
+                    }
+                },
+                {
+                    "timestamp": 1640246500.316,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/orders/20af113f-d74e-4f7a-a810-8eaf392ccb2f"
+                    }
+                },
+                {
+                    "timestamp": 1640246500.753,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "div.v-input__control > div.v-input__slot"
+                },
+                {
+                    "timestamp": 1640246500.959,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/offers/f758ffcf-3d1a-4ff7-98ee-0b648350fc12"
+                    }
+                },
+                {
+                    "timestamp": 1640246501.125,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "button#workNEW_FAILUREBtn.white--text.ma-1.v-btn.v-btn--disabled.v-btn--has-bg.theme--light.v-size--default[type=\"button\"]"
+                },
+                {
+                    "timestamp": 1640246501.248,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/orders/20af113f-d74e-4f7a-a810-8eaf392ccb2f/same-phone"
+                    }
+                },
+                {
+                    "timestamp": 1640246501.321,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "div.elevation-3.v-card.v-sheet.theme--light"
+                },
+                {
+                    "timestamp": 1640246501.357,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/work-directions/e783615d-503e-4fb0-9e4b-c0946e8cf79a"
+                    }
+                },
+                {
+                    "timestamp": 1640246501.622,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/telephonies?workDirectionId=e783615d-503e-4fb0-9e4b-c0946e8cf79a"
+                    }
+                },
+                {
+                    "timestamp": 1640246501.784,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/orders/verdict?buyout=1&delivered=0&shipped=0&return=0&approved=0"
+                    }
+                },
+                {
+                    "timestamp": 1640246501.853,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "button.mb-2.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--dark.v-size--large.green.darken-2[type=\"button\"]"
+                },
+                {
+                    "timestamp": 1640246501.88,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/call-centers/760188a4-cb2e-4f7a-917d-743225c7bd7b"
+                    }
+                },
+                {
+                    "timestamp": 1640246502.162,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/dictionaries/country-locales"
+                    }
+                },
+                {
+                    "timestamp": 1640246502.583,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/form-fields?offerId=f758ffcf-3d1a-4ff7-98ee-0b648350fc12"
+                    }
+                },
+                {
+                    "timestamp": 1640246503.486,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/couriers?code=PH"
+                    }
+                },
+                {
+                    "timestamp": 1640246503.504,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/order-reasons?locale=en"
+                    }
+                },
+                {
+                    "timestamp": 1640246503.517,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/scripts?offerId=f758ffcf-3d1a-4ff7-98ee-0b648350fc12"
+                    }
+                },
+                {
+                    "timestamp": 1640246503.744,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "GET",
+                        "status_code": 200,
+                        "url": "https://api.leadzvon.ru/api/operator/goods?offerId=f758ffcf-3d1a-4ff7-98ee-0b648350fc12"
+                    }
+                },
+                {
+                    "timestamp": 1640246503.988,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "button#goodsStepNextBtn.mx-0.v-btn.v-btn--disabled.v-btn--has-bg.theme--light.v-size--default[type=\"button\"]"
+                },
+                {
+                    "timestamp": 1640246504.963,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246505.754,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246508.086,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 200,
+                        "url": "https://manager.eu.smartlook.cloud/rec/init?lookup=find&sid=Tvw13bmlcW"
+                    }
+                },
+                {
+                    "timestamp": 1640246508.627,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=0&time=18.9&t=189&data=1&serverHost=manager.eu.smartlook.cloud&group=30d&version=5c49d3ebf3"
+                    }
+                },
+                {
+                    "timestamp": 1640246510.244,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 200,
+                        "url": "https://assets-proxy.smartlook.cloud/cache"
+                    }
+                },
+                {
+                    "timestamp": 1640246512.888,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246514.772,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246515.806,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=1&time=755.6&t=7556&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246522.892,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246523.211,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=2&time=1501.3&t=15013&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246525.007,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246527.514,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "button#workCancelCallBtn.ml-0.blue--text.text-lowercase.workCancelCallBtn.v-btn.v-btn--text.theme--dark.v-size--default[type=\"button\"]"
+                },
+                {
+                    "timestamp": 1640246530.696,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=3&time=2250.1&t=22501&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246532.903,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246534.769,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246542.89,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246549.032,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "div.v-input__control > div.v-input__slot"
+                },
+                {
+                    "timestamp": 1640246552.894,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246553.218,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=4&time=4501.7&t=45017&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246555.019,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246560.706,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=5&time=5250.3&t=52503&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246562.889,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246565.056,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246568.194,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=6&time=5999.7&t=59997&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246572.889,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246573.407,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "button#workCancelCallBtn.ml-0.blue--text.text-lowercase.workCancelCallBtn.v-btn.v-btn--text.theme--dark.v-size--default[type=\"button\"]"
+                },
+                {
+                    "timestamp": 1640246574.768,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246575.71,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=7&time=6750&t=67500&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246582.899,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246583.202,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=8&time=7501.2&t=75012&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246584.781,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246590.692,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=9&time=8249.9&t=82499&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246592.888,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246595.014,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246598.2,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=10&time=8999.8&t=89998&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246602.88,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246604.761,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246605.69,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=11&time=9749.2&t=97492&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246612.88,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246613.24,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "i.v-icon.notranslate.mdi.mdi-chevron-down.theme--light"
+                },
+                {
+                    "timestamp": 1640246613.578,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=12&time=10535.8&t=105358&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246615.028,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246620.707,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=13&time=11249.5&t=112495&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246622.889,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://api.leadzvon.ru/api/operator/metrics"
+                    }
+                },
+                {
+                    "timestamp": 1640246625.031,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 201,
+                        "url": "https://sessions.leadzvon.ru/api/records"
+                    }
+                },
+                {
+                    "timestamp": 1640246625.598,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "span.v-btn__content"
+                },
+                {
+                    "timestamp": 1640246625.957,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "div.v-input__control > div.v-input__slot"
+                },
+                {
+                    "timestamp": 1640246628.195,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "div.v-input__slot > div.v-select__slot > div.v-input__append-inner"
+                },
+                {
+                    "timestamp": 1640246628.686,
+                    "type": "http",
+                    "category": "xhr",
+                    "level": "info",
+                    "data": {
+                        "method": "POST",
+                        "status_code": 204,
+                        "url": "https://web-writer.sg.smartlook.cloud/rec/write?rid=9eP-acU9EX&index=14&time=12047&t=120470&data=1&group=30d"
+                    }
+                },
+                {
+                    "timestamp": 1640246630.586,
+                    "type": "default",
+                    "category": "navigation",
+                    "level": "info",
+                    "data": {
+                        "from": "/operator/work",
+                        "to": "/operator/dashboard"
+                    }
+                },
+                {
+                    "timestamp": 1640246631.501,
+                    "type": "default",
+                    "category": "ui.click",
+                    "level": "info",
+                    "message": "g#SvgjsG1213 > g#SvgjsG1214 > g#SvgjsG1216 > g#SvgjsG1241 > path#SvgjsPath1242"
+                }
+            ]
+        },
+        "exception": {
+            "values": [
+                {
+                    "type": "TypeError",
+                    "value": "Cannot read property 'scrollHeight' of undefined",
+                    "stacktrace": {
+                        "frames": [
+                            {
+                                "function": "HTMLDivElement.original._wrapper",
+                                "module": "chunk-vendors",
+                                "filename": "/js/chunk-vendors.8e8140d8.js",
+                                "abs_path": "https://leadzvon.ru/js/chunk-vendors.8e8140d8.js",
+                                "lineno": 73,
+                                "colno": 85756,
+                                "in_app": true
+                            },
+                            {
+                                "function": "HTMLDivElement.invoker",
+                                "module": "chunk-vendors",
+                                "filename": "/js/chunk-vendors.8e8140d8.js",
+                                "abs_path": "https://leadzvon.ru/js/chunk-vendors.8e8140d8.js",
+                                "lineno": 73,
+                                "colno": 20095,
+                                "in_app": true
+                            },
+                            {
+                                "function": "invokeWithErrorHandling",
+                                "module": "chunk-vendors",
+                                "filename": "/js/chunk-vendors.8e8140d8.js",
+                                "abs_path": "https://leadzvon.ru/js/chunk-vendors.8e8140d8.js",
+                                "lineno": 73,
+                                "colno": 17482,
+                                "in_app": true
+                            },
+                            {
+                                "function": "VueComponent.onScroll",
+                                "module": "chunk-vendors",
+                                "filename": "/js/chunk-vendors.8e8140d8.js",
+                                "abs_path": "https://leadzvon.ru/js/chunk-vendors.8e8140d8.js",
+                                "lineno": 323,
+                                "colno": 19697,
+                                "in_app": true
+                            }
+                        ]
+                    },
+                    "mechanism": {
+                        "type": "generic",
+                        "handled": true
+                    }
+                }
+            ]
+        },
+        "tags": [
+            [
+                "browser",
+                "Chrome Mobile 90.0.4430"
+            ],
+            [
+                "browser.name",
+                "Chrome Mobile"
+            ],
+            [
+                "device",
+                "MRD-LX2"
+            ],
+            [
+                "device.family",
+                "Huawei MRD-LX2"
+            ],
+            [
+                "environment",
+                "production"
+            ],
+            [
+                "handled",
+                "yes"
+            ],
+            [
+                "level",
+                "error"
+            ],
+            [
+                "mechanism",
+                "generic"
+            ],
+            [
+                "os",
+                "Android 9"
+            ],
+            [
+                "os.name",
+                "Android"
+            ],
+            [
+                "sentry:release",
+                "4.8.14"
+            ],
+            [
+                "sentry:user",
+                "id:bc07b2d3-b60e-4f1b-958e-aed7e01046cd"
+            ],
+            [
+                "url",
+                "https://leadzvon.ru/operator/dashboard"
+            ]
+        ],
+        "extra": {
+            "UnprocessableEntityError": {
+                "message": [
+                    " \nThis value should be between 0 and 12000."
+                ]
+            },
+            "sessionURL": "https://admin.leadzvon.ru/sessions/operator/bc07b2d3-b60e-4f1b-958e-aed7e01046cd?id=1640243991378574"
+        },
+        "sdk": {
+            "name": "sentry.javascript.browser",
+            "version": "5.30.0",
+            "integrations": [
+                "InboundFilters",
+                "FunctionToString",
+                "TryCatch",
+                "Breadcrumbs",
+                "GlobalHandlers",
+                "LinkedErrors",
+                "UserAgent",
+                "Vue"
+            ],
+            "packages": [
+                {
+                    "name": "npm:@sentry/browser",
+                    "version": "5.30.0"
+                }
+            ]
+        },
+        "errors": [
+            {
+                "type": "too_large_for_cache",
+                "url": "https://leadzvon.ru/js/chunk-vendors.8e8140d8.js"
+            }
+        ],
+        "key_id": "8",
+        "project": 8,
+        "grouping_config": {
+            "enhancements": "eJybzDRxY05qemJypZWRgaGlroGxrqHRBABbKAcD",
+            "id": "legacy:2019-03-12"
+        },
+        "_metrics": {
+            "bytes.ingested.event": 19536,
+            "bytes.stored.event": 24356,
+            "flag.processing.error": true
+        },
+        "_ref": 8,
+        "_ref_version": 2,
+        "hashes": [
+            "0288675b95c94244a0e17d1242363f70"
+        ],
+        "location": "/js/chunk-vendors.8e8140d8.js",
+        "metadata": {
+            "filename": "/js/chunk-vendors.8e8140d8.js",
+            "function": "VueComponent.onScroll",
+            "type": "TypeError",
+            "value": "Cannot read property 'scrollHeight' of undefined"
+        },
+        "nodestore_insert": 1640246635.014771,
+        "title": "TypeError: Cannot read property 'scrollHeight' of undefined",
+        "id": "cd06d9f8c05a40c2917ed29c067f999b"
+    }
+}

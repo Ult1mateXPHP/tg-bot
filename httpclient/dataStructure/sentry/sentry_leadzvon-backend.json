@@ -1,0 +1,345 @@
+{
+    "id": "194258",
+    "project": "leadzvon-backend",
+    "project_name": "Leadzvon Backend",
+    "project_slug": "leadzvon-backend",
+    "logger": "php",
+    "level": "error",
+    "culprit": "/bin/console in ?",
+    "message": "",
+    "url": "https://sentry.teamlead.com/organizations/leadzvon/issues/194258/?referrer=webhooks_plugin",
+    "triggering_rules": [
+        "BACK_TELEGRAM"
+    ],
+    "event": {
+        "event_id": "b14a8a58366e455081da7375b2dab136",
+        "level": "error",
+        "version": "7",
+        "type": "error",
+        "fingerprint": [
+            "{{ default }}"
+        ],
+        "culprit": "/bin/console in ?",
+        "logger": "php",
+        "platform": "php",
+        "timestamp": 1640346682.150835,
+        "received": 1640346682.152937,
+        "release": "v4.8.0-112-g7b93",
+        "environment": "prod",
+        "request": {
+            "headers": [
+                [
+                    "RequestId",
+                    "internal_request"
+                ]
+            ]
+        },
+        "contexts": {
+            "runtime": {
+                "name": "php",
+                "version": "8.0.12",
+                "type": "runtime"
+            }
+        },
+        "exception": {
+            "values": [
+                {
+                    "type": "Error",
+                    "value": "Failed opening required '/srv/leadzvon/new-back/releases/113/var/cache/prod/ContainerEiq9Yhf/getConsole_ErrorListenerService.php' (include_path='.:/usr/share/php')",
+                    "stacktrace": {
+                        "frames": [
+                            {
+                                "filename": "/bin/console",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/bin/console",
+                                "lineno": 45,
+                                "pre_context": [
+                                    "    }",
+                                    "}",
+                                    "",
+                                    "$kernel = new Kernel($_SERVER['APP_ENV'], (bool)$_SERVER['APP_DEBUG']);",
+                                    "$application = new Application($kernel);"
+                                ],
+                                "context_line": "$application->run($input);",
+                                "post_context": [
+                                    ""
+                                ],
+                                "in_app": true
+                            },
+                            {
+                                "function": "Symfony\\Component\\Console\\Application::run",
+                                "raw_function": "Symfony\\Component\\Console\\Application::run",
+                                "filename": "/vendor/symfony/console/Application.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/vendor/symfony/console/Application.php",
+                                "lineno": 166,
+                                "pre_context": [
+                                    "        }",
+                                    "",
+                                    "        $this->configureIO($input, $output);",
+                                    "",
+                                    "        try {"
+                                ],
+                                "context_line": "            $exitCode = $this->doRun($input, $output);",
+                                "post_context": [
+                                    "        } catch (\\Exception $e) {",
+                                    "            if (!$this->catchExceptions) {",
+                                    "                throw $e;",
+                                    "            }",
+                                    ""
+                                ],
+                                "in_app": false
+                            },
+                            {
+                                "function": "Symfony\\Bundle\\FrameworkBundle\\Console\\Application::doRun",
+                                "raw_function": "Symfony\\Bundle\\FrameworkBundle\\Console\\Application::doRun",
+                                "filename": "/vendor/symfony/framework-bundle/Console/Application.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/vendor/symfony/framework-bundle/Console/Application.php",
+                                "lineno": 82,
+                                "pre_context": [
+                                    "            $this->renderRegistrationErrors($input, $output);",
+                                    "        }",
+                                    "",
+                                    "        $this->setDispatcher($this->kernel->getContainer()->get('event_dispatcher'));",
+                                    ""
+                                ],
+                                "context_line": "        return parent::doRun($input, $output);",
+                                "post_context": [
+                                    "    }",
+                                    "",
+                                    "    /**",
+                                    "     * {@inheritdoc}",
+                                    "     */"
+                                ],
+                                "in_app": false
+                            },
+                            {
+                                "function": "Symfony\\Component\\Console\\Application::doRun",
+                                "raw_function": "Symfony\\Component\\Console\\Application::doRun",
+                                "filename": "/vendor/symfony/console/Application.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/vendor/symfony/console/Application.php",
+                                "lineno": 290,
+                                "pre_context": [
+                                    "",
+                                    "            $command = $this->find($alternative);",
+                                    "        }",
+                                    "",
+                                    "        $this->runningCommand = $command;"
+                                ],
+                                "context_line": "        $exitCode = $this->doRunCommand($command, $input, $output);",
+                                "post_context": [
+                                    "        $this->runningCommand = null;",
+                                    "",
+                                    "        return $exitCode;",
+                                    "    }",
+                                    ""
+                                ],
+                                "in_app": false
+                            },
+                            {
+                                "function": "Symfony\\Bundle\\FrameworkBundle\\Console\\Application::doRunCommand",
+                                "raw_function": "Symfony\\Bundle\\FrameworkBundle\\Console\\Application::doRunCommand",
+                                "filename": "/vendor/symfony/framework-bundle/Console/Application.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/vendor/symfony/framework-bundle/Console/Application.php",
+                                "lineno": 96,
+                                "pre_context": [
+                                    "            if ($this->registrationErrors) {",
+                                    "                $this->renderRegistrationErrors($input, $output);",
+                                    "                $this->registrationErrors = [];",
+                                    "            }",
+                                    ""
+                                ],
+                                "context_line": "            return parent::doRunCommand($command, $input, $output);",
+                                "post_context": [
+                                    "        }",
+                                    "",
+                                    "        $returnCode = parent::doRunCommand($command, $input, $output);",
+                                    "",
+                                    "        if ($this->registrationErrors) {"
+                                ],
+                                "in_app": false
+                            },
+                            {
+                                "function": "Symfony\\Component\\Console\\Application::doRunCommand",
+                                "raw_function": "Symfony\\Component\\Console\\Application::doRunCommand",
+                                "filename": "/vendor/symfony/console/Application.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/vendor/symfony/console/Application.php",
+                                "lineno": 1004,
+                                "pre_context": [
+                                    "                $e = null;",
+                                    "            }",
+                                    "        }",
+                                    "",
+                                    "        $event = new ConsoleTerminateEvent($command, $input, $output, $exitCode);"
+                                ],
+                                "context_line": "        $this->dispatcher->dispatch($event, ConsoleEvents::TERMINATE);",
+                                "post_context": [
+                                    "",
+                                    "        if (null !== $e) {",
+                                    "            throw $e;",
+                                    "        }",
+                                    ""
+                                ],
+                                "in_app": false
+                            },
+                            {
+                                "function": "Symfony\\Component\\EventDispatcher\\EventDispatcher::dispatch",
+                                "raw_function": "Symfony\\Component\\EventDispatcher\\EventDispatcher::dispatch",
+                                "filename": "/vendor/symfony/event-dispatcher/EventDispatcher.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/vendor/symfony/event-dispatcher/EventDispatcher.php",
+                                "lineno": 59,
+                                "pre_context": [
+                                    "        } else {",
+                                    "            $listeners = $this->getListeners($eventName);",
+                                    "        }",
+                                    "",
+                                    "        if ($listeners) {"
+                                ],
+                                "context_line": "            $this->callListeners($listeners, $eventName, $event);",
+                                "post_context": [
+                                    "        }",
+                                    "",
+                                    "        return $event;",
+                                    "    }",
+                                    ""
+                                ],
+                                "in_app": false
+                            },
+                            {
+                                "function": "Symfony\\Component\\EventDispatcher\\EventDispatcher::callListeners",
+                                "raw_function": "Symfony\\Component\\EventDispatcher\\EventDispatcher::callListeners",
+                                "filename": "/vendor/symfony/event-dispatcher/EventDispatcher.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/vendor/symfony/event-dispatcher/EventDispatcher.php",
+                                "lineno": 230,
+                                "pre_context": [
+                                    "",
+                                    "        foreach ($listeners as $listener) {",
+                                    "            if ($stoppable && $event->isPropagationStopped()) {",
+                                    "                break;",
+                                    "            }"
+                                ],
+                                "context_line": "            $listener($event, $eventName, $this);",
+                                "post_context": [
+                                    "        }",
+                                    "    }",
+                                    "",
+                                    "    /**",
+                                    "     * Sorts the internal list of listeners for the given event by priority."
+                                ],
+                                "in_app": false
+                            },
+                            {
+                                "function": "Symfony\\Component\\EventDispatcher\\EventDispatcher::Symfony\\Component\\EventDispatcher\\{closure}",
+                                "raw_function": "Symfony\\Component\\EventDispatcher\\EventDispatcher::Symfony\\Component\\EventDispatcher\\{closure}",
+                                "filename": "/vendor/symfony/event-dispatcher/EventDispatcher.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/vendor/symfony/event-dispatcher/EventDispatcher.php",
+                                "lineno": 267,
+                                "pre_context": [
+                                    "            foreach ($listeners as &$listener) {",
+                                    "                $closure = &$this->optimized[$eventName][];",
+                                    "                if (\\is_array($listener) && isset($listener[0]) && $listener[0] instanceof \\Closure && 2 >= \\count($listener)) {",
+                                    "                    $closure = static function (...$args) use (&$listener, &$closure) {",
+                                    "                        if ($listener[0] instanceof \\Closure) {"
+                                ],
+                                "context_line": "                            $listener[0] = $listener[0]();",
+                                "post_context": [
+                                    "                            $listener[1] = $listener[1] ?? '__invoke';",
+                                    "                        }",
+                                    "                        ($closure = \\Closure::fromCallable($listener))(...$args);",
+                                    "                    };",
+                                    "                } else {"
+                                ],
+                                "in_app": false
+                            },
+                            {
+                                "function": "ContainerEiq9Yhf\\App_KernelProdContainer::ContainerEiq9Yhf\\{closure}",
+                                "raw_function": "ContainerEiq9Yhf\\App_KernelProdContainer::ContainerEiq9Yhf\\{closure}",
+                                "filename": "/var/cache/prod/ContainerEiq9Yhf/App_KernelProdContainer.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/var/cache/prod/ContainerEiq9Yhf/App_KernelProdContainer.php",
+                                "lineno": 475,
+                                "in_app": false
+                            },
+                            {
+                                "function": "ContainerEiq9Yhf\\App_KernelProdContainer::load",
+                                "raw_function": "ContainerEiq9Yhf\\App_KernelProdContainer::load",
+                                "filename": "/var/cache/prod/ContainerEiq9Yhf/App_KernelProdContainer.php",
+                                "abs_path": "/srv/leadzvon/new-back/releases/113/var/cache/prod/ContainerEiq9Yhf/App_KernelProdContainer.php",
+                                "lineno": 316,
+                                "in_app": false
+                            }
+                        ]
+                    },
+                    "mechanism": {
+                        "type": "generic",
+                        "handled": false
+                    }
+                }
+            ]
+        },
+        "tags": [
+            [
+                "environment",
+                "prod"
+            ],
+            [
+                "handled",
+                "no"
+            ],
+            [
+                "level",
+                "error"
+            ],
+            [
+                "logger",
+                "php"
+            ],
+            [
+                "mechanism",
+                "generic"
+            ],
+            [
+                "runtime",
+                "php 8.0.12"
+            ],
+            [
+                "runtime.name",
+                "php"
+            ],
+            [
+                "sentry:release",
+                "v4.8.0-112-g7b93"
+            ],
+            [
+                "server_name",
+                "next-leadzvon"
+            ]
+        ],
+        "sdk": {
+            "name": "sentry.php.symfony",
+            "version": "4.2.3"
+        },
+        "key_id": "7",
+        "project": 7,
+        "grouping_config": {
+            "enhancements": "eJybzDRxY05qemJypZWRgaGlroGxrqHRBABbKAcD",
+            "id": "legacy:2019-03-12"
+        },
+        "_metrics": {
+            "bytes.ingested.event": 7764,
+            "bytes.stored.event": 11502
+        },
+        "_ref": 7,
+        "_ref_version": 2,
+        "hashes": [
+            "b7f29831965d0a512efc70c726748d22"
+        ],
+        "location": "/var/cache/prod/ContainerEiq9Yhf/App_KernelProdContainer.php",
+        "metadata": {
+            "filename": "/var/cache/prod/ContainerEiq9Yhf/App_KernelProdContainer.php",
+            "function": "ContainerEiq9Yhf\\App_KernelProdContainer::load",
+            "type": "Error",
+            "value": "Failed opening required '/srv/leadzvon/new-back/releases/113/var/cache/prod/ContainerEiq9Yhf/getConsole_ErrorListenerService.php' (include_path='.:/usr/share/php')"
+        },
+        "nodestore_insert": 1640346683.01236,
+        "title": "Error: Failed opening required '/srv/leadzvon/new-back/releases/113/var/cache/prod/ContainerEiq9Yhf/getC...",
+        "id": "b14a8a58366e455081da7375b2dab136"
+    }
+}

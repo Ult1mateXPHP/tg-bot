@@ -1,0 +1,72 @@
+version: "3.7"
+
+services:
+  nginx:
+    ## nginx нужен только для локальной разработки,
+    ## в продакшене он работает НАД контейнерами - в хост-системе.
+    image: nginx:latest
+    container_name: nginx-hookbot
+    restart: unless-stopped
+    volumes:
+      - ./public:/app/public
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "127.0.0.1:85:80"
+      - "127.0.0.1:86:80"
+
+  php:
+    container_name: php-hookbot
+    build:
+      context: ./docker/php
+      dockerfile: fpm/Dockerfile
+    tty: true
+    environment:
+      PHP_IDE_CONFIG: serverName=hookbot
+    volumes:
+      - ./:/app
+      - /usr/bin/yt-dlp:/usr/bin/yt-dlp
+      - composer_volume:/root/.composer/cache
+    restart: always
+
+  db:
+    container_name: postgres_hookbot
+    image: postgres:13-alpine
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:54322:5432"
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: hookbot
+    # Вывод текущих sql запросов в stdout
+    command: postgres -c log_statement=all
+
+  db2:
+    image: mysql:5.7
+    container_name: mysql_hookbot
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'hookbot'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '127.0.0.1:3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+
+  redis:
+    container_name: redis_hookbot
+    image: redis:7-alpine
+    ports:
+      - "127.0.0.1:6378:6379"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+volumes:
+  composer_volume:
+  db_volume:
+  my-db:

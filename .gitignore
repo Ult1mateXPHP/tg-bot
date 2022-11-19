@@ -1,0 +1,16 @@
+###> symfony/framework-bundle ###
+.env.local
+.env.local.php
+.env.*.local
+public/bundles/
+!var/log/prod/.gitkeep
+!var/log/supervisor/.gitkeep
+var/
+vendor/
+###< symfony/framework-bundle ###
+
+*.local.*
+.idea
+.DS_Store
+
+httpclient/http-client.private.env.json

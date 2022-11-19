@@ -1,0 +1,33 @@
+monolog:
+    use_microseconds: true,
+    channels: [ 'main', 'app', 'gitlab', 'sentry' ],
+    handlers:
+        main:
+            type: fingers_crossed
+            action_level: error
+            handler: nested
+            excluded_http_codes: [401, 422, 404, 405]
+            buffer_size: 50 # How many messages should be saved? Prevent memory leaks
+        nested:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%/app.json"
+            level: debug
+            formatter: monolog.formatter.json
+        console:
+            type: console
+            process_psr_3_messages: false
+            channels: ["!event", "!doctrine", "!rabbit"]
+        gitlab:
+            type: rotating_file
+            max_files: 5
+            channels: ["gitlab"]
+            path: "%kernel.logs_dir%/%kernel.environment%/gitlab.json"
+            level: debug
+            formatter: 'monolog.formatter.leadzvon_processor'
+        sentry:
+            type: rotating_file
+            max_files: 5
+            channels: [ "sentry" ]
+            path: "%kernel.logs_dir%/%kernel.environment%/sentry.json"
+            level: debug
+            formatter: 'monolog.formatter.leadzvon_processor'

@@ -1,0 +1,63 @@
+{
+  "object_kind": "push",
+  "event_name": "push",
+  "before": "fd675c8354af16f4a4b3d6c7b499d6cb2dff58da",
+  "after": "7b9391820a75ad6c05ad2e13cf4b6847a237d65b",
+  "ref": "refs/heads/master",
+  "checkout_sha": "7b9391820a75ad6c05ad2e13cf4b6847a237d65b",
+  "message": null,
+  "user_id": 24,
+  "user_name": "Ионов Дмитрий",
+  "user_username": "dimaionov",
+  "user_email": "",
+  "user_avatar": "https://git.teamlead.com/uploads/-/system/user/avatar/24/avatar.png",
+  "project_id": 42,
+  "project": {
+    "id": 42,
+    "name": "leadzvon_backend_new",
+    "description": "",
+    "web_url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new",
+    "avatar_url": "https://git.teamlead.com/uploads/-/system/project/avatar/42/sas.png",
+    "git_ssh_url": "git@git.teamlead.com:leadzvon/backend/leadzvon_backend_new.git",
+    "git_http_url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new.git",
+    "namespace": "backend",
+    "visibility_level": 0,
+    "path_with_namespace": "leadzvon/backend/leadzvon_backend_new",
+    "default_branch": "alpha",
+    "ci_config_path": "",
+    "homepage": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new",
+    "url": "git@git.teamlead.com:leadzvon/backend/leadzvon_backend_new.git",
+    "ssh_url": "git@git.teamlead.com:leadzvon/backend/leadzvon_backend_new.git",
+    "http_url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new.git"
+  },
+  "commits": [
+    {
+      "id": "7b9391820a75ad6c05ad2e13cf4b6847a237d65b",
+      "message": "[Фикс] [Валидатор] Убрал одну из причин отмены. REASON_CLIENTS_ARE_SILENT_AND_DO_NOT_TALK\n",
+      "title": "[Фикс] [Валидатор] Убрал одну из причин отмены. REASON_CLIENTS_ARE_SILENT_AND_DO_NOT_TALK",
+      "timestamp": "2021-12-20T17:41:56+03:00",
+      "url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new/-/commit/7b9391820a75ad6c05ad2e13cf4b6847a237d65b",
+      "author": {
+        "name": "Дима Ионов 🐙",
+        "email": "dimaionov97@gmail.com"
+      },
+      "added": [],
+      "modified": [
+        "src/Domain/Core/Order/Enum/OrderReasonEnum.php",
+        "translations/messages.en.json"
+      ],
+      "removed": []
+    }
+  ],
+  "total_commits_count": 1,
+  "push_options": [],
+  "repository": {
+    "name": "leadzvon_backend_new",
+    "url": "git@git.teamlead.com:leadzvon/backend/leadzvon_backend_new.git",
+    "description": "",
+    "homepage": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new",
+    "git_http_url": "https://git.teamlead.com/leadzvon/backend/leadzvon_backend_new.git",
+    "git_ssh_url": "git@git.teamlead.com:leadzvon/backend/leadzvon_backend_new.git",
+    "visibility_level": 0
+  }
+}

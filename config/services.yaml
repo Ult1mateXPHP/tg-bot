@@ -1,0 +1,49 @@
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+  LZ_INTEGRATION_TOKEN: '%env(LZ_INTEGRATION_TOKEN)%'
+
+
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  App\:
+    resource: '../src/*'
+    autowire: true
+    exclude:
+      - '../src/DependencyInjection/'
+      - '../src/Entity/'
+      - '../src/Kernel.php'
+      - '../src/Tests/'
+
+  monolog.formatter.leadzvon_processor:
+    class: Monolog\Formatter\JsonFormatter
+
+  App\Infrastructure\Logger\LeadzvonProcessor:
+    tags:
+      - { name: monolog.processor }
+
+  telegram_bot:
+    class: App\Service\TelegramService
+    autowire: true
+    arguments:
+      - '%env(API_KEY)%'
+      - '%env(BOT_USERNAME)%'
+      - '%env(BOT_HOOK_URL)%'
+      - '%env(DOWNLOAD_PATH)%'
+      - '%env(UPLOAD_PATH)%'
+      - '%env(COMMANDS_PATH)%'
+
+  telegram_client:
+    class: App\Service\TelegramClient
+    autowire: true
+    arguments:
+      - \danog\MadelineProto\API('session.madeline')
+      - '%env(BOT_USERNAME)%'
+
+
+  App\Service\TelegramService: '@telegram_bot'
+  App\Service\TelegramClient: '@telegram_client'
+
