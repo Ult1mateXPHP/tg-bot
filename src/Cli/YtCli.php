@@ -30,16 +30,15 @@ class YtCli extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $file = 'out.txt';
+        $lines = [];
+        $video = 'https://www.youtube.com/';
+        $file = '/usr/local/bin/yt-dlp'; //'yt-dlp';
         $fs = new Filesystem();
 
         if ($fs->exists($file)) {
-//            $formats = file_get_contents($file);
-//            $output->writeln($formats);
-            $lines = file($file, FILE_SKIP_EMPTY_LINES);
-//            $ll = ArrayList::collect($lines);
+            exec(sprintf('%s -F %s', $file, $video), $lines);
 
-            foreach ($lines as $line_num => $line) {
+            foreach ($lines as $line) {
                 $matches = [];
                 if (preg_match(pattern: '/^(18|22|140|251)+/', subject: $line, matches: $matches)) {
                     $format = (int)$matches[0];
@@ -54,25 +53,19 @@ class YtCli extends Command
                 }
             }
 
-            $this->getFormats();
             return Command::SUCCESS;
         }
 
         return Command::FAILURE;
     }
 
-    /**
-     * List available formats
-     */
-    private function getFormats()
+    private static function validateLink(string $link): bool
     {
-//        $path = '/usr/bin/yt-dlp';
-        $path = 'yt-dlp';
-        $video = 'https://www.youtube.com/watch?v=sV6GPEF5Yxg';
-        $output = [];
-        exec(sprintf('%s -F %s', $path, $video), $output);
-        var_dump($output);
-        $allFormats = [];
-        $enableFormats = [];
+        $pattern = '/(?:https?:\/\/)?(?:www\.)?youtu(?:\.be\/|be.com\/\S*(?:watch|embed)(?:(?:(?=\/[-a-zA-Z0-9_]{11,}(?!\S))\/)|(?:\S*v=|v\/)))([-a-zA-Z0-9_]{11,})/m';
+        if (preg_match(pattern: $pattern, subject: $link)) {
+            return true;
+        }
+
+        return false;
     }
 }

@@ -7,13 +7,14 @@ namespace App\Domain\Telegram\Commands\UserCommands;
 use Longman\TelegramBot\Commands\UserCommand;
 
 use Longman\TelegramBot\Entities\InlineKeyboard;
-use Longman\TelegramBot\Entities\Keyboard;
 use Longman\TelegramBot\Entities\ServerResponse;
 use Longman\TelegramBot\Exception\TelegramException;
 use Symfony\Component\Filesystem\Filesystem;
 
 class YoutubeCommand extends UserCommand
 {
+    public const BINARY_PATH = '/usr/local/bin/yt-dlp';
+
     /**
      * @var string
      */
@@ -36,52 +37,67 @@ class YoutubeCommand extends UserCommand
 
     protected $private_only = true;
 
-    /**
-     * Main command execution
-     *
-     * @return ServerResponse
-     * @throws TelegramException
-     */
-    public function execute2(): ServerResponse
-    {
-        $msg = sprintf('This youtube downloader: %s', $this->checkYt());
-        return $this->replyToUser($msg);
-    }
-
-    private function checkYt(): bool
-    {
-        $filesystem = new Filesystem();
-        return $filesystem->exists('/usr/bin/yt-dlp');
-    }
-
     public function execute(): ServerResponse
     {
+        $message = $this->getMessage();
+        $link = $message->getText(true);
+        if (!self::validateLink($link)) {
+            return $this->replyToUser('ссылка на ролик не валидная');
+        }
 
-        $keyboard = new InlineKeyboard([
-            ['text' => 'Inline Query (current chat)', 'switch_inline_query_current_chat' => 'inline query...'],
-            ['text' => 'Inline Query (other chat)', 'switch_inline_query' => 'inline query...'],
-        ], [
-            ['text' => 'Callback', 'callback_data' => 'выбранное качество видео'],
-            ['text' => 'Open URL', 'url' => 'https://github.com/php-telegram-bot/example-bot'],
-        ]);
+        if ($this->hasExistYt()) {
+            $keyboard = $this->getFormats($link ?? '');
 
-        $keyboard
+            return $this->replyToUser('Выбери качество:', [
+                'reply_markup' => $keyboard,
+            ]);
+        }
+
+        return $this->replyToUser('Не удалось получить данные о видеоролике');
+    }
+
+    private function hasExistYt(): bool
+    {
+        $filesystem = new Filesystem();
+        return $filesystem->exists(self::BINARY_PATH);
+    }
+
+    private function getFormats(string $url): InlineKeyboard
+    {
+        $buttons = [];
+        $matchedFormat = [];
+        exec(sprintf('%s -F %s', self::BINARY_PATH, $url), $formats);
+        foreach ($formats as $format) {
+            if (preg_match(pattern: '/^(18|22|140|251)+/', subject: $format, matches: $matchedFormat)) {
+                $button = match ((int)$matchedFormat[0]) {
+                    18 => ['text' => 'mp4 360p', 'callback_data' => 18],
+                    22 => ['text' => 'mp4 720p', 'callback_data' => 22],
+                    140 => ['text' => '130k m4a', 'callback_data' => 140],
+                    251 => ['text' => '140k opus', 'callback_data' => 251],
+                    default => ['default button', 'callback_data' => 18]
+                };
+                $buttons[] = $button;
+            }
+        }
+        $keyboard = new InlineKeyboard($buttons);
+
+        return $keyboard
             ->setResizeKeyboard(true)
             ->setOneTimeKeyboard(true)
             ->setSelective(false);
-
-        return $this->replyToUser('Выбери качество', [
-            'reply_markup' => $keyboard,
-        ]);
     }
 
-    private function showButtons()
+    public static function validateLink(?string $link): bool
     {
+        if (empty($link)) {
+            return false;
+        }
 
-    }
+        $pattern = '/(?:https?:\/\/)?(?:www\.)?youtu(?:\.be\/|be.com\/\S*(?:watch|embed)(?:(?:(?=\/[-a-zA-Z0-9_]{11,}(?!\S))\/)|(?:\S*v=|v\/)))([-a-zA-Z0-9_]{11,})/m';
+        if (preg_match(pattern: $pattern, subject: $link)) {
+            return true;
+        }
 
-    private function downloadVideo()
-    {
-
+        return false;
     }
 }
