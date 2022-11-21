@@ -51,7 +51,11 @@ class TelegramService
 
         $this->telegram->setDownloadPath($this->downloadPath);
         $this->telegram->setUploadPath($this->uploadPath);
+
+        //todo: не работает setCommandsPath, команды не видны боту
         $this->telegram->setCommandsPath($this->commandsPath);
+
+        //todo: команды можно подключать так, но это не удобно
         $this->telegram->addCommandClasses([
             StartCommand::class,
             TestCommand::class,
@@ -78,7 +82,7 @@ class TelegramService
         return $this->hookUrl;
     }
 
-    //todo есть смысл подключить уже существующий монолог $logger
+    //todo есть смысл подключить уже существующий монолог $logger, не срочно
     public function setLogger(): void
     {
         TelegramLog::initialize(
