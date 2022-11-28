@@ -39,7 +39,11 @@ class HookController extends AbstractController
         return new Response(content: 'OK, test done!', status: 200);
     }
 
-    #[Route(path: '/test', name: 'test', methods: ['GET', 'POST'])]
+    /**
+     * @todo доработать функционал отключения хука:
+     * https://github.com/php-telegram-bot/example-bot/blob/master/unset.php
+     */
+    #[Route(path: '/unhook', name: 'test', methods: ['GET', 'POST'])]
     public function testAction(Request $request): Response
     {
         return new Response(content: 'OK, test done!', status: 200);

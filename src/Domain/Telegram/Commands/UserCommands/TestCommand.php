@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Domain\Telegram\Commands\UserCommands;
 
 use Longman\TelegramBot\Commands\UserCommand;
-use Longman\TelegramBot\Request;
 
 use Longman\TelegramBot\Entities\ServerResponse;
 use Longman\TelegramBot\Exception\TelegramException;
@@ -42,7 +41,7 @@ class TestCommand extends UserCommand
      */
     public function execute(): ServerResponse
     {
-        return $this->replyToChat(
+        return $this->replyToUser(
             'This is test' . PHP_EOL .
             'Type /help to see all commands!'
         );

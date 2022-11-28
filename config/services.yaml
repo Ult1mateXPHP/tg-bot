@@ -18,10 +18,10 @@ services:
       - '../src/Kernel.php'
       - '../src/Tests/'
 
-  monolog.formatter.leadzvon_processor:
+  monolog.formatter.custom_processor:
     class: Monolog\Formatter\JsonFormatter
 
-  App\Infrastructure\Logger\LeadzvonProcessor:
+  App\Infrastructure\Logger\CustomProcessor:
     tags:
       - { name: monolog.processor }
 
@@ -34,7 +34,7 @@ services:
       - '%env(BOT_HOOK_URL)%'
       - '%env(DOWNLOAD_PATH)%'
       - '%env(UPLOAD_PATH)%'
-      - '%env(COMMANDS_PATH)%'
+      - '/app/src/Domain/Telegram/Commands/'
 
   telegram_client:
     class: App\Service\TelegramClient

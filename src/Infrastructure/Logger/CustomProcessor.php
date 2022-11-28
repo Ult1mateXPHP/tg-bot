@@ -7,7 +7,7 @@ namespace App\Infrastructure\Logger;
 use Monolog\DateTimeImmutable;
 use Monolog\Processor\ProcessorInterface;
 
-class LeadzvonProcessor implements ProcessorInterface
+class CustomProcessor implements ProcessorInterface
 {
     public const ELASTIC_DATETIME_FORMAT = 'Y-m-d\TH:i:s.u\Z';
 

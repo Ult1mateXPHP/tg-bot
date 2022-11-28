@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Service;
 
+use App\Domain\Telegram\Commands\ServiceMessages\GenericmessageCommand;
 use App\Domain\Telegram\Commands\SystemCommands\CallbackCommand;
 use App\Domain\Telegram\Commands\UserCommands\StartCommand;
 use App\Domain\Telegram\Commands\UserCommands\TestCommand;
@@ -14,6 +15,7 @@ use Longman\TelegramBot\TelegramLog;
 use Monolog\Formatter\JsonFormatter;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 
 use function Lib\Functions\env;
 
@@ -30,6 +32,7 @@ class TelegramService
         private string $downloadPath,
         private string $uploadPath,
         private string $commandsPath,
+        private readonly LoggerInterface $botLogger
     )
     {
         $this->telegram = new Telegram(
@@ -61,6 +64,7 @@ class TelegramService
             TestCommand::class,
             YoutubeCommand::class,
             CallbackCommand::class,
+            GenericmessageCommand::class,
         ]);
 
         $this->request = new Request();
